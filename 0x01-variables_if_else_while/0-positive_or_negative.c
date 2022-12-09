@@ -5,7 +5,9 @@
 
 /* betty style doc for function main goes there */
 /**
-* main - Checks if a random generatednumber is negative or positive
+* main
+* Description: Checks if a random generated number is negative or positive
+* Return: a string output
 */
 int main(void)
 {
