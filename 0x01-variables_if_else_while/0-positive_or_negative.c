@@ -5,7 +5,7 @@
 
 /* betty style doc for function main goes there */
 /**
-* main
+* main - Checks if a random generated number is negative or positive
 * Description: Checks if a random generated number is negative or positive
 * Return: a string output
 */
