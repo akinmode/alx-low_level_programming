@@ -4,17 +4,11 @@
 #include <stdio.h>
 
 /* betty style doc for function main goes there */
-
+/**
+* main - Checks if a random generatednumber is negative or positive
+*/
 int main(void)
 {
-	/**
-	* The output of the program returns:
-	* The number, followed by
-	* if the number is greater than 0: is positive
-	* if the number is 0: is zero
-	* if the number is less than 0: is negatives
-	*/
-
 	int n;
 
 	srand(time(0));
