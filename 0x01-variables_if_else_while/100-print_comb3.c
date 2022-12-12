@@ -11,15 +11,22 @@
 */
 int main(void)
 {
-	int numbers;
+	int i, j;
 
-	for (numbers = 48; numbers <= 57; numbers++)
+	for (i = 48; i <= 57; i++)
 	{
-		putchar(numbers);
-		if (numbers < 57)
+		for (j = 48; j <= 57; j++)
 		{
-			putchar(',');
-			putchar(' ');
+			if (i != j && i < j)
+			{
+				putchar(i);
+				putchar(j);
+				if (i < 56)
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
 		}
 	}
 	putchar('\n');

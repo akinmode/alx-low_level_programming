@@ -11,5 +11,5 @@ int main(void)
 
 	while (*s)
 		putchar(*s++);
-	return (0);
+	return (1);
 }
