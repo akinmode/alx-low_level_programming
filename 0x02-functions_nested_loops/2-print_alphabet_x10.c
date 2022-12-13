@@ -2,6 +2,7 @@
 
 /**
 * print_alphabet_x10 - print a value
+* print_alphabet - print all alphabets
 * Desccription: prints all the alphabets in lower case
 * Return: string value
 */
