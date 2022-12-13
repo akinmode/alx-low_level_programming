@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 
 /**
 * main - print out a value
@@ -9,7 +10,9 @@
 int main()
 {
 	char *string = "_putchar";
-	while(*string) {
+
+	while(*string)
+	{
 		putchar(*string);
 		string++;
 	}
