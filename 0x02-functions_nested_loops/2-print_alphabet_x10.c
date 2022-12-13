@@ -1,13 +1,12 @@
 #include <stdio.h>
 
+void print_alphabet(void);
+
 /**
 * print_alphabet_x10 - print a value
-* print_alphabet - print all alphabets
 * Desccription: prints all the alphabets in lower case
 * Return: string value
 */
-
-void print_alphabet(void);
 
 void print_alphabet_x10(void)
 {
@@ -16,6 +15,12 @@ void print_alphabet_x10(void)
 	for (i = 1; i <= 10; i++)
 		print_alphabet();
 }
+
+/**
+* print_alphabet - print all alphabets
+* Desccription: prints all the alphabets in lower case
+* Return: string value
+*/
 
 void print_alphabet(void)
 {
