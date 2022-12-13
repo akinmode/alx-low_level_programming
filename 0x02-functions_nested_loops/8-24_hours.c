@@ -3,7 +3,6 @@
 
 /**
 * jack_bauer - print a value
-* @n: input parameter
 * Description: prints all the alphabets in lower case
 * Return: string value
 */
