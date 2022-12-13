@@ -7,11 +7,11 @@
 * Return: return a value
 */
 
-int main()
+int main(void)
 {
 	char *string = "_putchar";
 
-	while(*string)
+	while (*string)
 	{
 		putchar(*string);
 		string++;
