@@ -1,8 +1,7 @@
 #include <stdio.h>
 
 /**
-* print_to_98 - print a value
-* @n: parameter
+* main - print a value
 * Description: prints all the alphabets in lower case
 * Return: string value
 */
