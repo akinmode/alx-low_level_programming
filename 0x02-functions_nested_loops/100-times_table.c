@@ -36,7 +36,7 @@ void print_times_table(int n)
 				else if (((i * x) >= 100))
 				{
 					x == 0 ? printf("%d,", 0) : x < n ?
-                	                printf(" %d,", i * x) : printf(" %d", i * x);
+					printf(" %d,", i * x) : printf(" %d", i * x);
 				}
 			}
 			putchar('\n');
