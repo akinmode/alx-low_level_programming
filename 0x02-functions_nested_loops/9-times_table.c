@@ -1,36 +1,29 @@
-#include <stdlib.h>
+#include <stdio.h>
 #include "main.h"
 
 /**
-* jack_bauer - print a value
-* @n: input parameter
+* times_table - print a value
 * Description: prints all the alphabets in lower case
 * Return: string value
 */
 
-void jack_bauer(void)
+void times_table(void)
 {
-	int i, j, k, l;
+	int i, x;
 
-	for (i = 0; i <= 2; i++)
+	for (i = 0; i <= 9; i++)
 	{
-		for (j = 0; j <= 9; j++)
+		for (x = 0; x <= 9; x++)
 		{
-			if ((i <= 1 && j <= 9) || (i <= 2 && j <= 3))
+			if ((i * x)/10 == 0)
 			{
-				for (k = 0; k <= 5; k++)
-				{
-					for (l = 0; l <= 9; l++)
-					{
-						_putchar(i + '0');
-						_putchar(j + '0');
-						_putchar(':');
-						_putchar(k + '0');
-						_putchar(l + '0');
-						_putchar('\n');
-					}
-				}
+				x < 9 ? printf("%d,  ", i * x) : printf("%d", i * x);
+			}
+			else if ((i * x)/10 >= 1 && (i * x)/10 < 10)
+			{
+				x < 9 ? printf("%d, ", i*x) : printf("%d", i * x);
 			}
 		}
+		putchar('\n');
 	}
 }
