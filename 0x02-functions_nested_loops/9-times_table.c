@@ -21,7 +21,7 @@ void times_table(void)
 			}
 			else if ((i * x)/10 >= 1 && (i * x)/10 < 10)
 			{
-				x < 9 ? printf("%d, ", i*x) : printf("%d", i * x);
+				x < 9 ? printf("%d, ", i * x) : printf("%d", i * x);
 			}
 		}
 		putchar('\n');
