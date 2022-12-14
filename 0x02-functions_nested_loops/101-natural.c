@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
-* sum_nat - print a value
+* main - print a value
 * Description: prints all the alphabets in lower case
 * Return: string value
 */
