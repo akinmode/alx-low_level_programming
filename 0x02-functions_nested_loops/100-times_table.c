@@ -3,6 +3,7 @@
 
 /**
 * print_times_table - print a value
+* @n - parameter
 * Description: prints all the alphabets in lower case
 * Return: string value
 */
