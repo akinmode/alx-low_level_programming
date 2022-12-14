@@ -18,12 +18,12 @@ void times_table(void)
 			if ((i * x) <= 9)
 			{
 				x == 0 ? printf("%d,", 0) : x < 9 ? 
-					printf("  %d,", i * x) : printf("  %d", i * x);
+				printf("  %d,", i * x) : printf("  %d", i * x);
 			}
 			else if ((i * x) >= 10)
 			{
 				x == 0 ? printf("%d,", 0) : x < 9 ? 
-					printf(" %d,", i * x) : printf(" %d", i * x);
+				printf(" %d,", i * x) : printf(" %d", i * x);
 			}
 		}
 		putchar('\n');
