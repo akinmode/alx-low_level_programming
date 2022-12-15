@@ -21,5 +21,5 @@ int main(void)
 	}
 
 	printf("%ld\n", max_factor);
-        return (0);
+	return (0);
 }
