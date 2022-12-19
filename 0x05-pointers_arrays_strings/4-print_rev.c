@@ -3,7 +3,7 @@
 
 /**
 * print_rev - Resetting a value
-* @str: parameter
+* @s: parameter
 * Return: a value
 */
 
@@ -13,7 +13,7 @@ void print_rev(char *s)
 {
 	int i;
 
-	for (i = string_count(s); i >= 0; i--)
+	for (i = string_count(s)-1; i >= 0; i--)
 	{
 		_putchar(s[i]);
 	}
