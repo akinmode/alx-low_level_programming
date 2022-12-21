@@ -4,7 +4,8 @@
 /**
 * _strncat - Concatenate two strings
 * @dest: string one
-* @src : string two
+* @src: string two
+* @n: number of bytes to be copied from the source
 * Return: a combined string
 */
 
