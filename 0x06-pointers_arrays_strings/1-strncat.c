@@ -24,7 +24,7 @@ char *_strncat(char *dest, char *src, int n)
 	}
 	if (n < src_count)
 	{
-		while (*str2 != '\0' && *str2 < str2[n])
+		while (*str2 != '\0' && *str2 <= str2[n])
 		{
 			*str1 = *str2;
 			str2++;
