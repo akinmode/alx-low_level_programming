@@ -25,7 +25,7 @@ char *_strncat(char *dest, char *src, int n)
 	}
 	if (n < src_count)
 	{
-		while (*str2 != '\n' && i < n)
+		while (*str2 != '\0' && i < n)
 		{
 			*str1 = *str2;
 			str2++;
@@ -36,7 +36,7 @@ char *_strncat(char *dest, char *src, int n)
 	}
 	else
 	{
-		while (*str2 != '\0')
+		while (*str2)
 		{
 			*str1 = *str2;
 			str2++;
