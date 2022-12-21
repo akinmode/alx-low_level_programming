@@ -31,6 +31,7 @@ char *_strncat(char *dest, char *src, int n)
 			str1++;
 			i++;
 		}
+		*str1 = '\0';
 	}
 	else
 	{
@@ -41,6 +42,5 @@ char *_strncat(char *dest, char *src, int n)
 			str1++;
 		}
 	}
-	*str1 = '\0';
 	return (dest);
 }
