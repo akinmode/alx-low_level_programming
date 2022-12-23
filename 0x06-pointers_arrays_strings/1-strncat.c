@@ -23,7 +23,7 @@ char *_strncat(char *dest, char *src, int n)
 	{
 		str1++;
 	}
-	if (n < src_count)
+	if (n < src_count+1)
 	{
 		while (n-- > 0)
 			*str1++ = *src++;
