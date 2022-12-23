@@ -32,8 +32,8 @@ char *_strncat(char *dest, char *src, int n)
 	{
 		while (*str2)
 		{
-			*str1 = *str2;
-			str2++;
+			*str1 = *src;
+			src++;
 			str1++;
 		}
 	}
