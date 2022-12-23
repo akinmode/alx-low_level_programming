@@ -26,7 +26,7 @@ char *_strncat(char *dest, char *src, int n)
 	if (n < src_count)
 	{
 		while (n-- > 0)
-			*str1++ = *str2++;
+			*str1++ = *src++;
 	}
 	else
 	{
