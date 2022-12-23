@@ -25,7 +25,7 @@ void print_number(int n)
 
 	do {
 		if (i <= u || i == 1)
-			_putchar(u / i % 10 + '0');
+			_putchar(u % 10 + '0');
 		i /= 10;
 	} while (i != 0);
 }
