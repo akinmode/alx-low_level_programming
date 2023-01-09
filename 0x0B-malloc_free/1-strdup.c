@@ -9,24 +9,28 @@
 
 char *_strdup(char *str)
 {
-	int strc = 0;
+	int i = 0, strc = 1;
 	char *cparray;
 
 	if (!str)
 		return (NULL);
 
-	for (; *str != '\0'; str++)
+	while (str[strc])
 	{
 		strc++;
 	}
+
 	cparray = malloc((sizeof(char) * strc) + 1);
+
 	if (!cparray)
 		return (NULL);
 
-	while (*str)
+	while (i < strc)
 	{
-		*cparray++ = *str++;
+		cparray[i] = str[i];
+		i++;
 	}
-	*cparray = '\0';
+
+	cparray[i] = '\0';
 	return (cparray);
 }
