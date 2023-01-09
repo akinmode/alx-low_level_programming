@@ -12,14 +12,14 @@ char *str_concat(char *s1, char *s2)
 	int i = 0, j = 0, strc1 = 1, strc2 = 1;
 	char *nwarray;
 
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 	while (s1[strc1])
-	{
 		strc1++;
-	}
 	while (s2[strc2])
-	{
 		strc2++;
-	}
 
 	nwarray = malloc((sizeof(char) * (strc1 + strc2)) + 1);
 
