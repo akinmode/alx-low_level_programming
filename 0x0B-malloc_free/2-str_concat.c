@@ -9,7 +9,7 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	int i = 0, j = 0, nwlen, strc1 = 1, strc2 = 1;
+	int i = 0, j = 0, nwlen, strc1 = 0, strc2 = 0;
 	char *nwarray;
 
 	if (s1 == NULL)
