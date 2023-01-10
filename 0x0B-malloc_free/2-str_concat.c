@@ -9,7 +9,7 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	int i = 0, j = 0, strc1 = 1, strc2 = 1;
+	int i = 0, j = 0, nwlen, strc1 = 1, strc2 = 1;
 	char *nwarray;
 
 	if (s1 == NULL)
@@ -21,21 +21,22 @@ char *str_concat(char *s1, char *s2)
 	while (s2[strc2])
 		strc2++;
 
-	nwarray = malloc((sizeof(char) * (strc1 + strc2)) + 1);
+	nwlen = strc1 + strc2;
+	nwarray = malloc((sizeof(char) * nwlen) + 1);
 
 	if (!nwarray)
 		return (NULL);
 
-	while (i < strc1)
+	while (i < nwlen)
 	{
-		nwarray[i] = s1[i];
+		if (i <= strc1)
+			nwarray[i] = s1[i];
+		if (i >= strc1)
+		{
+			nwarray[i] = s2[j];
+			j++;
+		}
 		i++;
-	}
-	while (j < strc2)
-	{
-		nwarray[i] = s2[j];
-		i++;
-		j++;
 	}
 	nwarray[i] = '\0';
 	return (nwarray);
