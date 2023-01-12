@@ -15,14 +15,17 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 
 	if (new_size == old_size)
 		return (ptr);
-
+	if (ptr && new_size == 0)
+	{
+		free(ptr);
+		return (NULL);
+	}
 	if (!ptr || new_size > 0 || new_size <= old_size)
 	{
 		nwarray = malloc(new_size);
 		if (!nwarray)
 			return (NULL);
 	}
-
 	if (new_size > 0 && ptr != NULL)
 	{
 		newpt = nwarray;
@@ -32,7 +35,6 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		while (old_size--)
 			*newpt++ = *oldpt++;
 	}
-
 	free(ptr);
 	return (nwarray);
 }
