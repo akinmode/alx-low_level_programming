@@ -12,6 +12,6 @@ void *malloc_checked(unsigned int b)
 
 	memck = malloc(b);
 	if (!memck)
-		exit (98);
+		exit(98);
 	return (memck);
 }
