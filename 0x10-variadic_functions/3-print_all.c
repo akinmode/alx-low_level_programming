@@ -52,6 +52,7 @@ void print_all(const char * const format, ...)
 /**
 * print_a_char - prints a character of char type
 * @args: variadic arguments
+* @delim: delimiter
 * Return: none
 */
 void print_a_char(char *delim, va_list args)
@@ -62,6 +63,7 @@ void print_a_char(char *delim, va_list args)
 /**
 * print_a_integer - prints a character of integer type
 * @args: A variadic arguments
+* @delim: delimiter
 * Return: none
 */
 void print_a_integer(char *delim, va_list args)
@@ -72,6 +74,7 @@ void print_a_integer(char *delim, va_list args)
 /**
 * print_a_float - prints a character of float type
 * @args: variadic arguments
+* @delim: delimiter
 * Return: Nothing
 */
 void print_a_float(char *delim, va_list args)
@@ -82,6 +85,7 @@ void print_a_float(char *delim, va_list args)
 /**
 * print_a_char_ptr - prints the content of pointer to char type
 * @args: A list of variadic arguments
+* @delim: delimiter
 * Return: Nothing
 */
 void print_a_char_ptr(char *delim, va_list args)
