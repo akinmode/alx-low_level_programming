@@ -19,7 +19,7 @@ void print_all(const char * const format, ...);
 */
 typedef struct funclist
 {
-	void (*f)(va_list);
+	void (*f)(char *delim, va_list args);
 	char felem;
 } flist;
 #endif
