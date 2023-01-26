@@ -1,4 +1,4 @@
-#ifndef _LiSTS_
+#ifndef _LISTS_
 #define _LISTS_
 
 /**
