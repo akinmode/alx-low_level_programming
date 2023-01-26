@@ -1,1 +1,2 @@
-C - Singly linked lists
+# C - Singly linked lists
+Starting with linked lists
