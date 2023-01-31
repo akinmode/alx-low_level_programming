@@ -8,6 +8,7 @@
  * @head: head of list
  * Return: value of node, or 0 if list empty
  */
+ 
 int pop_listint(listint_t **head)
 {
 	int n;
