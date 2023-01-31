@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdio.h>
 #include "lists.h"
 
 size_t listint_len(const listint_t *h);
@@ -37,6 +38,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 				temp = temp->next;
 				nind++;
 			}
+			/* printf("%lu, %d, %d, \n", listint_len(*head), idx, n); */
 		}
 		else
 		{
