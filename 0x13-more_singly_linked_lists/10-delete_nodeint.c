@@ -1,72 +1,42 @@
 #include <stdlib.h>
-#include <stdio.h>
 #include "lists.h"
 
 size_t listint_len(const listint_t *h);
 
 /**
- * insert_nodeint_at_index - function that inserts a
- * new node at a given position.
+ * delete_nodeint_at_index - function that deletes the
+ * node at index index of a listint_t linked list.
  * @head: head of list
- * @idx: index of nodes
- * @n: node to insert
+ * @index: index of node to delete
  * Return: value of node, or 0 if list empty
  */
-listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
+
+int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
-	listint_t *inode, *temp;
-	unsigned int nind = 0;
+	listint_t *dnode, *temp;
 
 	if (head != NULL || *head != NULL)
 	{
-		if (idx < listint_len(*head) && idx > 0)
+		if (index == 0)
 		{
-			inode = malloc(sizeof(listint_t));
-			if (inode == NULL)
-				return (NULL);
+			temp = (*head)->next;
+			free(*head);
+			*head = temp;
+			return (1);
+		}
 
-			inode->n = n;
-			temp = (*head);
-			while (temp)
-			{
-				if (idx - 1 == nind)
-				{
-					inode->next = temp->next;
-					temp->next = inode;
-					return (inode);
-				}
-				temp = temp->next;
-				nind++;
-			}
-			/* printf("%lu, %d, %d, \n", listint_len(*head), idx, n); */
-		}
-		else
-		{
-			return (NULL);
-		}
+		for (temp = *head; index && temp->next != NULL; index--, temp = temp->next)
+			dnode = temp;
+		if (index)
+			return (-1);
+
+		dnode->next = dnode->next->next;
+		free(temp);
+		return (1);
 	}
-	return (NULL);
-}
-
-/**
-* listint_len - function that returns the
-* number of elements in a linked listint_t list.
-* @h: node of the linked  list
-* Return: elements
-*/
-
-size_t listint_len(const listint_t *h)
-{
-	size_t nnodes = 0;
-
-	if (h != NULL)
+	else
 	{
-		while (h != NULL)
-		{
-			nnodes++;
-			h = h->next;
-		}
-		return (nnodes);
+		return (-1);
 	}
-	return (0);
+	return (-1);
 }
