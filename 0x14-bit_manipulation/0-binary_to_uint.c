@@ -15,17 +15,13 @@ unsigned int binary_to_uint(const char *b)
 		strc++;
 	}
 
-	if (b != NULL)
+	while (strc--)
 	{
-		while (strc--)
-		{
-			if (b[strc] != '0' && b[strc] != '1')
-				return (0);
-			if (b[strc] == 49)
-				res += 1 << idx;
-			idx++;
-		}
-		return (res);
+		if (b[strc] != '0' && b[strc] != '1')
+			return (0);
+		if (b[strc] == 49)
+			res += 1 << idx;
+		idx++;
 	}
-	return (0);
+	return (res);
 }
