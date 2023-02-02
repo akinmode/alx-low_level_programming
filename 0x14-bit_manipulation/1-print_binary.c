@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include "main.h"
 
-void _divquo(unsigned long int n);
-
 /**
 * print_binary - function that prints the binary representation of a number.
 * @n: integer input
