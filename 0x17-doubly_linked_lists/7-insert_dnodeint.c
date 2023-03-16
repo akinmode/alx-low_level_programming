@@ -16,6 +16,10 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 
 	if (h != NULL || *h != NULL)
 	{
+		if (idx == 0)
+			return (add_dnodeint(h, n));
+		if (dlistint_len(*h) == idx)
+			return (add_dnodeint_end(h, n));
 		if (idx < dlistint_len(*h) && idx > 0)
 		{
 			inode = malloc(sizeof(dlistint_t));
