@@ -32,8 +32,10 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 			{
 				if (idx - 1 == nind)
 				{
-					inode->next = temp->next;
-					temp->next = inode;
+					inode->next = temp;
+					inode->prev = temp->prev;
+					temp = inode;
+					temp->prev->next = inode;
 					return (inode);
 				}
 				temp = temp->next;
