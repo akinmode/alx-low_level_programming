@@ -13,7 +13,7 @@ gcc -c -fPIC *.c
 
 Build the library (here libyourname.so) from all .o with the 'shared' flag:
 ```
-
+gcc -shared -o libyourname.so *.o
 ```
 Verify the dynamic library and have the right functions as dynamic symbols you can use:
 ```
