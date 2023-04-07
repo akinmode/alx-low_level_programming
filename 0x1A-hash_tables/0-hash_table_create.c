@@ -9,8 +9,9 @@ hash_table_t *hash_table_create(unsigned long int size)
 {
 	int i = 0;
 	hash_table_t *htable = (hash_table_t *) malloc(sizeof(hash_table_t));
+
 	if (htable == NULL)
-		return NULL;
+		return (NULL);
 	htable->size = size;
 	htable->array = (hash_node_t **) calloc(htable->size, sizeof(hash_node_t));
 	for (i = 0; i < htable->size; i++)
