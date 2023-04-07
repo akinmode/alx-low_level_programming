@@ -22,7 +22,7 @@ void hash_table_print(const hash_table_t *ht)
 			if (comma == 1)
 				printf(", ");
 			comma = 1;
-			printf("'%s' : '%s'", ht->array[i]->key, ht->array[i]->value);
+			printf("'%s': '%s'", ht->array[i]->key, ht->array[i]->value);
 			node = node->next;
 		}
 	}
