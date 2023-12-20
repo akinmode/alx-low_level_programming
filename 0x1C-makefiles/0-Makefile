@@ -1,0 +1,16 @@
+CFLAGS = -Wall -Werror -Wextra -pedantic -std=gnu89
+
+all: school
+
+school: main.o school.o
+	gcc $(CFLAGS) main.o school.o -o school
+	chmod u+x school
+
+main.o: main.c
+	gcc $(CFLAGS) -c main.c
+
+school.o: school.c
+	gcc $(CFLAGS) -c school.c
+
+clean:
+	rm -f *.o school
