@@ -14,7 +14,6 @@ int display_elf_header(const char *filename);
 * @argv: arugment strings
 *
 * Return: 0 on success
-* 98 if elf magic is not matched
 */
 int main(int argc, char **argv)
 {
@@ -31,17 +30,32 @@ int main(int argc, char **argv)
 * display_elf_header - displaye the content of the ELF header
 * @filename: name of the header file
 * Return: Always 0 on success
+* 98 if elf magic is not matched
 */
 int display_elf_header(const char *filename)
 {
 
-	int file_handle;
+	int file_handle, l_read;
+	char head[32];
 
 	file_handle = open(filename, O_RDONLY);
 	if (file_handle == -1)
 	{
 		dprintf(STDERR_FILENO,
-			"Error: Failed to read file header or does not exist!\n");
+			"Error: File does not exist!\n");
+		return (98);
+	}
+	l_read = read(file_handle, head, 32);
+	if (l_read == -1)
+	{
+		dprintf(STDERR_FILENO,
+			"Error: Failed to read file header!\n");
+		return (98);
+	}
+	if (head[0] != 0x7f || head[1] != 'E' || head[2] != 'L' || head[3] != 'F')
+	{
+		dprintf(STDERR_FILENO,
+			"Error: Failed to read file header\n");
 		return (98);
 	}
 	return (0);
