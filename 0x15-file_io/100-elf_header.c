@@ -4,7 +4,6 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include <elf.h>
-#include <errno.h>
 
 int display_elf_header(const char *filename);
 
@@ -21,7 +20,7 @@ int main(int argc, char **argv)
 {
 	if (argc != 2)
 	{
-		fprintf(stderr, "Usage: %s elf_filename\n", argv[0]);
+		dprintf(STDERR_FILENO, "Usage: ./elf_header ubuntu64\n");
 		exit(98);
 	}
 	display_elf_header(argv[1]);
