@@ -6,6 +6,7 @@
 #include <elf.h>
 
 int display_elf_header(const char *filename);
+void printclass(char *head);
 
 /**
 * main - parses an elf header file
@@ -56,5 +57,26 @@ int display_elf_header(const char *filename)
 		return (98);
 	if (head[0] != 0x7f || head[1] != 'E' || head[2] != 'L' || head[3] != 'F')
 		return (98);
+	printf("ELF Header:\n  Magic:   ");
+	for (l_read = 0; l_read < 16; l_read++)
+		printf("%02x ", (unsigned int) head[l_read]);
+	printf("\n");
+	printclass(head);
 	return (0);
+}
+
+/**
+* printclass - prints the class from an elf header
+* @head: header information
+* Return: void
+*/
+void printclass(char *head)
+{
+	printf("  %-35s", "Class:");
+	if (head[4] == 2)
+		printf("ELF64\n");
+	else if (head[4] == 1)
+		printf("ELF32\n");
+	else
+		printf("<unknown: %02hx>", head[4]);
 }
